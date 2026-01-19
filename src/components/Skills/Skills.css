@@ -1,0 +1,129 @@
+:root {
+  --primary-blue: #007BFF;
+  --light-blue: #8CDDFF;
+  --dark-blue: #0056b3;
+  --bg-white: #FFFFFF;
+  --text-gray: #555;
+  --chip-bg: #eef7ff;
+}
+
+.skills-container {
+  background-color: var(--bg-white);
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.skills-title {
+  color: var(--dark-blue);
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+/* Progress Bars */
+.skill-bar-wrapper {
+  margin-bottom: 25px;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-gray);
+}
+
+.progress-bg {
+  background-color: #f0f0f0;
+  height: 12px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-blue), var(--light-blue));
+  border-radius: 10px;
+  transition: width 1.5s ease-in-out;
+}
+
+/* Chips */
+.tools-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-chip {
+  background-color: var(--chip-bg);
+  color: var(--dark-blue);
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--light-blue);
+  box-shadow: 0 2px 5px rgba(0, 123, 255, 0.1);
+}
+
+.divider {
+  margin: 50px 0;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+/* Soft Skills */
+.soft-skills-title {
+  text-align: center;
+  color: var(--text-gray);
+  margin-bottom: 30px;
+}
+
+.soft-skills-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.soft-skill-card {
+  text-align: center;
+  width: 150px;
+}
+
+.soft-icon-circle {
+  width: 60px;
+  height: 60px;
+  background-color: var(--chip-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+  transition: transform 0.3s ease;
+}
+
+.soft-skill-card:hover .soft-icon-circle {
+  transform: translateY(-5px);
+  background-color: var(--light-blue);
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
