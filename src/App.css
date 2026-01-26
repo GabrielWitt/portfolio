@@ -7,15 +7,9 @@
 @tailwind utilities;
 
 /* 3. LUEGO TUS VARIABLES Y ESTILOS */
+
 :root {
   --bg-color: #ffffff;
-  /* ... resto de tus variables */
-}
-/* =========================================
-   SISTEMA DE DISEÑO (Variables)
-   ========================================= */
-:root {
-  /* Colores - Modo Claro (Default) */
   --bg-color: #ffffff;
   --bg-secondary: #f8fafc;
   --text-main: #0f172a;
@@ -168,4 +162,31 @@ a {
 .app-wrapper {
   background-color: var(--bg-color);
   min-height: 100vh;
+}
+
+/* Asegura que las imágenes no se estiren y que el texto no se salga */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ajuste para el padding global en móviles */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  h1 { font-size: 2.2rem; } /* Título del Hero más pequeño */
+  h2 { font-size: 1.8rem; } /* Títulos de sección */
+  
+  /* El Header suele apretarse mucho, mejor ocultar el texto y dejar iconos o menú hamburguesa */
+  .nav-links {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Evitar scroll horizontal por culpa de la línea de tiempo */
+.experience-section {
+  overflow-x: hidden;
 }

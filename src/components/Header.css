@@ -1,21 +1,121 @@
-/* Header.css */
-
+/* --- Desktop Styles --- */
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
   height: 80px;
-  /* USANDO VARIABLES */
-  background-color: var(--bg-color); 
+  background-color: var(--bg-color);
   border-bottom: 1px solid var(--border-color);
-  font-family: var(--font-main);
-  box-shadow: var(--shadow);
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
+
+.lang-toggle {
+  margin: 9px;
+}
+
+.nav-menu-desktop {
+  display: flex;
+  gap: 32px;
+}
+
+.mobile-menu-btn, .nav-menu-mobile {
+  display: none;
+}
+
+.actions-section {
+    display: inline-flex !important;
+    width: 200px;
+    justify-content: flex-end;
+}
+
+/* --- Mobile Breakpoint (768px) --- */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0 20px;
+  }
+
+  /* Escondemos lo que no va en la barra de Mobile */
+  .nav-menu-desktop, .desktop-only {
+    display: none !important
+  }
+
+  /* Activamos botón Hamburguesa y lo alineamos a la izquierda */
+  .mobile-menu-btn {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--text-main);
+    font-size: 1.5rem;
+    flex: 1;
+    text-align: left;
+    z-index: 1100;
+  }
+
+  /* Logo al centro */
+  .logo-section {
+    flex: 2;
+    justify-content: center;
+  }
+
+  /* Idioma a la derecha */
+  .actions-section {
+    display: flex !important;
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  /* Menú Mobile (Columna) */
+  .nav-menu-mobile {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: var(--card-bg);
+    padding: 30px;
+    gap: 20px;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+
+  .nav-menu-mobile.active {
+    left: 0;
+  }
+
+  .nav-menu-mobile a {
+    font-size: 1.2rem;
+    color: var(--text-main);
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .mobile-divider {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 10px 0;
+  }
+
+  .mobile-resume-link {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    text-align: left;
+    font-weight: 600;
+    padding: 0;
+  }
+
+  .lang-toggle {
+    margin: 0px;
+  }
+}
+
 
 /* --- Logo --- */
 .logo-section {
@@ -40,91 +140,4 @@
   font-weight: 700;
   color: var(--text-main);
   letter-spacing: -0.5px;
-}
-
-/* --- Navigation --- */
-.nav-menu {
-  display: flex;
-  gap: 32px;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: var(--text-muted);
-  font-weight: 500;
-  font-size: 1rem;
-  transition: color 0.2s ease;
-}
-
-.nav-link:hover {
-  color: var(--primary);
-}
-
-/* --- Actions Right Side --- */
-.actions-section {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-/* Language Toggle */
-.lang-toggle {
-  cursor: pointer;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  display: flex;
-  gap: 4px;
-  user-select: none;
-}
-
-.lang-active {
-  color: var(--text-main);
-}
-
-.lang-divider {
-  color: var(--border-color);
-}
-
-/* Buttons (Heredan de los estilos globales que pusimos en App.css) */
-.btn {
-  padding: 10px 24px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.btn-secondary {
-  background-color: transparent;
-  color: var(--text-main);
-  border: 2px solid var(--border-color);
-}
-
-.btn-secondary:hover {
-  background-color: var(--bg-secondary);
-  border-color: var(--primary);
-  color: var(--primary);
-}
-
-.btn-primary {
-  background-color: var(--primary);
-  color: white;
-  border: none;
-}
-
-.btn-primary:hover {
-  background-color: var(--primary-hover);
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .nav-menu {
-    display: none; 
-  }
-  .header-container {
-    padding: 0 20px;
-  }
 }
