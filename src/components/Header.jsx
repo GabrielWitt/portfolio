@@ -1,25 +1,20 @@
 import './Header.css';
 import { useLanguage } from '../context/LanguageContext';
-import cvEn from '../CV/GabrielWittCV.pdf';
-import cvEs from '../CV/GabrielWittCVSP.pdf';
 
-const Header = () => {
+// Recibimos onOpenContact como prop
+const Header = ({ onOpenContact }) => {
   const { language, toggleLanguage, t } = useLanguage();
 
-  const handleDownload = () => {
-    // Seleccionamos el archivo importado según el idioma
-    const cvFile = language === 'en' ? cvEn : cvEs;
-    const fileName = language === 'en' ? 'GabrielWittCV.pdf' : 'GabrielWittCVSP.pdf';
+  const handleResumeClick = () => {
+      // URLs directas (Raw) para que el navegador abra el PDF directamente
+      const cvUrl = language === 'en' 
+        ? 'https://raw.githubusercontent.com/GabrielWitt/portfolio/948e7757adf8904e780b527cc766b7ec61b006f7/src/assets/CV/GabrielWittCV.pdf'
+        : 'https://raw.githubusercontent.com/GabrielWitt/portfolio/948e7757adf8904e780b527cc766b7ec61b006f7/src/assets/CV/GabrielWittCVSP.pdf';
 
-    // Disparamos la descarga
-    const link = document.createElement('a');
-    link.href = cvFile;
-    link.download = fileName;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
+      // Abrir en pestaña nueva
+      window.open(cvUrl, '_blank', 'noopener,noreferrer');
+    };
+  
   return (
     <header className="header-container">
       <div className="logo-section">
@@ -41,15 +36,12 @@ const Header = () => {
           <span className={language === 'es' ? 'lang-active' : ''}>ES</span>
         </div>
 
-        <button 
-          className="btn btn-secondary" 
-          onClick={() => window.open('/path-to-your-cv.pdf', '_blank')}
-        >
+        <button onClick={handleResumeClick} className="resume-btn">
           {t.header.resume}
         </button>
 
-        <button onClick={handleDownload} className="resume-btn">
-          {t.header.resume}
+        <button className="btn btn-primary" onClick={onOpenContact}>
+          {t.header.contact}
         </button>
       </div>
     </header>
