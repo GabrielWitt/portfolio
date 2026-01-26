@@ -13,18 +13,10 @@ const en = {
       ctaPrimary: "View my work",
       ctaSecondary: "Contact me",
   },
+  // 1. SECCIÓN DE HABILIDADES (Técnicas y Blandas)
   skillsSection: {
     title: 'Technical Skills',
     softTitle: 'Soft Skills',
-    categories: [ /* las categorías que ya teníamos */ ],
-    softSkills: [
-      { name: "Problem Solving", icon: "FaLightbulb" },
-      { name: "Communication", icon: "FaComments" },
-      { name: "Project Management", icon: "FaTasks" }
-    ]
-  },
-  skills: {
-    sectionTitle: 'FEATURED PROJECTS',
     categories: [
       {
         id: "frontend",
@@ -34,18 +26,27 @@ const en = {
       {
         id: "mobile",
         title: "Mobile",
-        skills: ["React Native", "Ionic", "SwiftUI", "App Store Publishing"]
+        skills: ["React Native", "Ionic", "SwiftUI", "App Store Publishing", "Play Store Publishing"]
       },
       {
         id: "backend",
         title: "Backend & Cloud",
-        skills: ["Node.js", "Firebase", "RESTful APIs", "NoSQL"]
+        skills: ["Node.js", "Firebase", "RESTful APIs", "NoSQL", "AWS Cognito & Lambda"]
       }
     ],
+    softSkills: [
+      { name: "Problem Solving", icon: "FaLightbulb" },
+      { name: "Communication", icon: "FaComments" },
+      { name: "Project Management", icon: "FaTasks" }
+    ]
+  },
+  // 2. SECCIÓN DE PROYECTOS
+  skills: { 
+    sectionTitle: 'FEATURED PROJECTS',
     projects: [
       {
         id: 1,
-        image: '../../assets/dvora-app.png', // Actualiza con tu imagen
+        image: '../../assets/dvora-app.png',
         tech: ['Ionic 7', 'SwiftUI', 'Firebase', 'ML Kit'],
         content: {
           en: {

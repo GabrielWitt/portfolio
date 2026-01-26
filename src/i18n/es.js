@@ -26,12 +26,12 @@ const es = {
       {
         id: "mobile",
         title: "Mobile",
-        skills: ["React Native", "Ionic", "SwiftUI", "Publicación en App Store"]
+        skills: ["React Native", "Ionic", "SwiftUI", "Publicación en App Store", "Publicación en Play Store"]
       },
       {
         id: "backend",
         title: "Backend & Cloud",
-        skills: ["Node.js", "Firebase", "APIs RESTful", "NoSQL"]
+        skills: ["Node.js", "Firebase", "APIs RESTful", "NoSQL", "AWS Cognito & Lambda"]
       }
     ],
     softSkills: [

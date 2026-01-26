@@ -2,10 +2,11 @@ import React from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import { 
   FaReact, FaNodeJs, FaMobileAlt, FaCloud, 
-  FaLightbulb, FaComments, FaTasks 
+  FaLightbulb, FaComments, FaTasks, FaApple, 
+  FaCode
 } from 'react-icons/fa';
 import { 
-  SiTypescript, SiFirebase, SiTailwindcss, SiIonic, SiSwift 
+  SiTypescript, SiFirebase, SiTailwindcss, SiIonic, SiSwift, SiRedux, SiGoogleplay, SiAmazon 
 } from 'react-icons/si';
 import './Skills.css';
 
@@ -17,13 +18,22 @@ const Skills = () => {
     const icons = {
       'React': <FaReact />,
       'TypeScript': <SiTypescript />,
-      'React Native': <FaMobileAlt />,
-      'Node.js': <FaNodeJs />,
-      'Firebase': <SiFirebase />,
+      'Next.js': <FaReact />, // Next no tiene icono oficial en FA/SI a veces, React queda bien
+      'Redux': <SiRedux />,
       'Tailwind CSS': <SiTailwindcss />,
+      'React Native': <FaMobileAlt />,
       'Ionic': <SiIonic />,
       'SwiftUI': <SiSwift />,
-      'Cloud': <FaCloud />
+      'App Store Publishing': <FaApple />, // Para la versión EN
+      'Publicación en App Store': <FaApple />, // Para la versión ES
+      'Play Store Publishing': <SiGoogleplay />, // Para la versión EN
+      'Publicación en Play Store': <SiGoogleplay />, // Para la versión ES
+      'Node.js': <FaNodeJs />,
+      'Firebase': <SiFirebase />,
+      'RESTful APIs': <FaCode />, // Versión en inglés
+      'APIs RESTful': <FaCode />, // Versión en español
+      'NoSQL': <FaCloud />,
+      'AWS Cognito & Lambda': <SiAmazon />,
     };
     return icons[skill] || null;
   };
