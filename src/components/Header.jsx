@@ -1,9 +1,24 @@
 import './Header.css';
 import { useLanguage } from '../context/LanguageContext';
+import cvEn from '../CV/GabrielWittCV.pdf';
+import cvEs from '../CV/GabrielWittCVSP.pdf';
 
-// Recibimos onOpenContact como prop
-const Header = ({ onOpenContact }) => {
+const Header = () => {
   const { language, toggleLanguage, t } = useLanguage();
+
+  const handleDownload = () => {
+    // Seleccionamos el archivo importado según el idioma
+    const cvFile = language === 'en' ? cvEn : cvEs;
+    const fileName = language === 'en' ? 'GabrielWittCV.pdf' : 'GabrielWittCVSP.pdf';
+
+    // Disparamos la descarga
+    const link = document.createElement('a');
+    link.href = cvFile;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <header className="header-container">
@@ -33,8 +48,8 @@ const Header = ({ onOpenContact }) => {
           {t.header.resume}
         </button>
 
-        <button className="btn btn-primary" onClick={onOpenContact}>
-          {t.header.contact}
+        <button onClick={handleDownload} className="resume-btn">
+          {t.header.resume}
         </button>
       </div>
     </header>
