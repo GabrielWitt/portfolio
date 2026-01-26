@@ -12,10 +12,6 @@
   z-index: 1000;
 }
 
-.lang-toggle {
-  margin: 9px;
-}
-
 .nav-menu-desktop {
   display: flex;
   gap: 32px;
@@ -27,9 +23,15 @@
 
 .actions-section {
     display: inline-flex !important;
-    width: 200px;
+    width: 300px;
     justify-content: flex-end;
 }
+
+.lang-toggle {
+  margin: 9px;
+}
+
+.resume-btn{ margin-right: 9px;}
 
 /* --- Mobile Breakpoint (768px) --- */
 @media (max-width: 768px) {
