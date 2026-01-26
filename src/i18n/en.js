@@ -13,8 +13,35 @@ const en = {
       ctaPrimary: "View my work",
       ctaSecondary: "Contact me",
   },
+  skillsSection: {
+    title: 'Technical Skills',
+    softTitle: 'Soft Skills',
+    categories: [ /* las categorías que ya teníamos */ ],
+    softSkills: [
+      { name: "Problem Solving", icon: "FaLightbulb" },
+      { name: "Communication", icon: "FaComments" },
+      { name: "Project Management", icon: "FaTasks" }
+    ]
+  },
   skills: {
     sectionTitle: 'FEATURED PROJECTS',
+    categories: [
+      {
+        id: "frontend",
+        title: "Frontend",
+        skills: ["React", "TypeScript", "Next.js", "Redux", "Tailwind CSS"]
+      },
+      {
+        id: "mobile",
+        title: "Mobile",
+        skills: ["React Native", "Ionic", "SwiftUI", "App Store Publishing"]
+      },
+      {
+        id: "backend",
+        title: "Backend & Cloud",
+        skills: ["Node.js", "Firebase", "RESTful APIs", "NoSQL"]
+      }
+    ],
     projects: [
       {
         id: 1,

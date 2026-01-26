@@ -1,80 +1,116 @@
 /* =========================================
-   Lado de la Imagen (Profesional & Animado)
+   ESTRUCTURA GENERAL (LAYOUT)
    ========================================= */
+.hero-section {
+  background-color: var(--bg-color);
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 5%;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
 
-/* Contenedor externo para posicionar y el efecto de "blur" */
+.hero-container {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  /* Imagen a la izquierda (1fr), Texto a la derecha (1.2fr) */
+  grid-template-columns: 1fr 1.2fr; 
+  gap: 4rem;
+  align-items: center;
+}
+
+/* =========================================
+   LADO DE LA IMAGEN
+   ========================================= */
 .hero-image-wrapper {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Animación de entrada suave para todo el bloque */
   animation: fadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  /* Un pequeño retraso para que el texto aparezca primero si quieres, si no, quita esta línea */
-  animation-delay: 0.2s; 
 }
 
-/* El fondo difuminado azul detrás de la imagen */
 .hero-accent-blur {
   position: absolute;
-  width: 90%; /* Un poco más contenido */
+  width: 90%;
   height: 90%;
-  background-color: var(--accent-color);
-  opacity: 0.25; /* Sutil */
+  background-color: var(--accent); /* Usando variable */
+  opacity: 0.2;
   filter: blur(70px);
   border-radius: 50%;
   z-index: 1;
-  /* Opcional: una animación de "respiración" muy lenta */
   animation: pulseSlow 8s infinite ease-in-out;
 }
 
-/* El contenedor principal que da la forma y el borde */
 .hero-image-main {
   position: relative;
   z-index: 2;
-  /* TAMAÑO CONTROLADO: Ajusta este valor si la quieres más grande o chica */
-  max-width: 360px; 
+  max-width: 380px; 
   width: 100%;
-  aspect-ratio: 1 / 1; /* Mantiene el formato cuadrado */
-  
+  aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  /* --- EL SECRETO DEL BORDE CON GRADIENTE --- */
-  padding: 5px; /* Esto define el grosor del borde */
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  border-radius: 30px; /* Bordes redondeados modernos */
-  
-  /* Sombra premium con color para que "flote" */
-  box-shadow: 0 25px 50px -12px rgba(0, 123, 255, 0.35);
-  
-  overflow: hidden; /* Asegura que la imagen respete el borde redondeado */
+  padding: 5px; 
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border-radius: 30px;
+  box-shadow: var(--shadow); /* Usando variable global */
+  overflow: hidden;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* La imagen real dentro del borde */
 .hero-profile-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Clave: corta la imagen para llenar el cuadrado sin deformar */
-  object-position: center top; /* Enfoca más la parte superior/cara si es necesario */
-  border-radius: 26px; /* Un poco menos de radio que el padre para que encaje perfecto */
-  background-color: var(--white); /* Fondo por si la imagen tiene transparencias */
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 26px;
+  background-color: var(--bg-color);
 }
 
-/* --- Efecto Hover (Interacción) --- */
-/* Cuando pasas el mouse, la imagen se eleva un poco y la sombra crece */
 .hero-image-main:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 35px 60px -15px rgba(0, 123, 255, 0.5);
+  transform: translateY(-8px) scale(1.02);
 }
 
 /* =========================================
-   Animaciones (Keyframes)
+   LADO DEL TEXTO
    ========================================= */
+.hero-text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: left; /* Alineado a la izquierda */
+  animation: fadeInUp 1s ease both;
+  animation-delay: 0.1s;
+}
 
-/* Animación de entrada: Aparece desde abajo */
+.hero-headline {
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 550px;
+}
+
+.hero-cta-group {
+  display: flex;
+  gap: 1.5rem; /* Espacio entre botones */
+  margin-top: 1rem;
+}
+
+/* =========================================
+   ANIMACIONES
+   ========================================= */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -86,19 +122,41 @@
   }
 }
 
-/* Animación opcional de "pulso" para el fondo borroso */
 @keyframes pulseSlow {
-  0%, 100% { transform: scale(1); opacity: 0.25; }
-  50% { transform: scale(1.05); opacity: 0.35; }
+  0%, 100% { transform: scale(1); opacity: 0.2; }
+  50% { transform: scale(1.1); opacity: 0.3; }
 }
 
-/* --- Ajuste para móviles --- */
+/* =========================================
+   RESPONSIVE
+   ========================================= */
 @media (max-width: 968px) {
-  .hero-image-main {
-    max-width: 280px; /* Un poco más pequeña en celular */
+  .hero-container {
+    grid-template-columns: 1fr; /* Una sola columna en móvil */
+    text-align: center;
+    gap: 3rem;
   }
+
   .hero-image-wrapper {
-     /* En móvil quizás no quieras delay */
-     animation-delay: 0s;
+    order: 1; /* Imagen arriba en móvil */
+  }
+
+  .hero-text-content {
+    order: 2; /* Texto abajo en móvil */
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    margin: 0 auto;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-image-main {
+    max-width: 300px;
   }
 }

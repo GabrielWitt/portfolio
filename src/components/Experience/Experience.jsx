@@ -1,38 +1,39 @@
 import React from 'react';
 import { useLanguage } from '../../context/LanguageContext';
-import { experienceData } from '../../data/experienceData';
 import './Experience.css';
 
 const Experience = () => {
-  const { language } = useLanguage();
+  // Extraemos t para las traducciones y language para saber qué versión mostrar
+  const { t, language } = useLanguage();
 
   return (
-    <section className="experience-section">
-      <h2 className="experience-title">
-        {language === 'es' ? 'Experiencia Profesonal' : 'Professional Experience'}
-      </h2>
-      
-      <div className="timeline-container">
-        {experienceData.map((item) => {
-          const content = item[language];
-          return (
-            <div key={item.id} className="timeline-item">
+    <section id="experience" className="experience-section">
+      <div className="container">
+        <h2 className="experience-title">{t.experience.title}</h2>
+        
+        <div className="timeline-container">
+          {t.experience.jobs.map((job, index) => (
+            <div key={index} className="timeline-item">
               <div className="timeline-dot"></div>
               
               <div className="experience-card">
                 <div className="experience-header">
-                  <img src={item.logo} alt={content.company} className="company-logo" />
-                  <div className="title-group">
-                    <h3>{content.role}</h3>
-                    <span className="company-name">{content.company}</span>
+                  {/* Si no tienes logos aún, puedes usar un icono genérico de react-icons */}
+                  <div className="company-logo-placeholder">
+                    {job.company.charAt(0)}
                   </div>
-                  <span className="experience-years">{content.years}</span>
+                  
+                  <div className="title-group">
+                    <h3>{job.role}</h3>
+                    <span className="company-name">{job.company}</span>
+                  </div>
+                  <span className="experience-years">{job.years}</span>
                 </div>
-                <p className="experience-description">{content.description}</p>
+                <p className="experience-description">{job.description}</p>
               </div>
             </div>
-          );
-        })}
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -1,22 +1,20 @@
 /* Header.css */
 
-/* General Reset for the component */
-* {
-  box-sizing: border-box;
-}
-
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 40px;
   height: 80px;
-  background-color: #FFFFFF;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02); /* Very subtle shadow for depth */
+  /* USANDO VARIABLES */
+  background-color: var(--bg-color); 
+  border-bottom: 1px solid var(--border-color);
+  font-family: var(--font-main);
+  box-shadow: var(--shadow);
   position: sticky;
   top: 0;
   z-index: 1000;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 /* --- Logo --- */
@@ -28,8 +26,9 @@
 }
 
 .logo-icon {
-  background-color: #333;
-  color: white;
+  /* Adaptable al modo oscuro */
+  background-color: var(--text-main);
+  color: var(--bg-color);
   padding: 5px 8px;
   border-radius: 6px;
   font-weight: bold;
@@ -39,7 +38,7 @@
 .logo-text {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #333333;
+  color: var(--text-main);
   letter-spacing: -0.5px;
 }
 
@@ -51,14 +50,14 @@
 
 .nav-link {
   text-decoration: none;
-  color: #333333;
+  color: var(--text-muted);
   font-weight: 500;
   font-size: 1rem;
   transition: color 0.2s ease;
 }
 
 .nav-link:hover {
-  color: #007BFF;
+  color: var(--primary);
 }
 
 /* --- Actions Right Side --- */
@@ -73,21 +72,21 @@
   cursor: pointer;
   font-size: 0.9rem;
   font-weight: 600;
-  color: #888;
+  color: var(--text-muted);
   display: flex;
   gap: 4px;
   user-select: none;
 }
 
 .lang-active {
-  color: #333333;
+  color: var(--text-main);
 }
 
 .lang-divider {
-  color: #ddd;
+  color: var(--border-color);
 }
 
-/* Buttons */
+/* Buttons (Heredan de los estilos globales que pusimos en App.css) */
 .btn {
   padding: 10px 24px;
   font-size: 0.95rem;
@@ -95,36 +94,37 @@
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s ease;
-  border: 2px solid transparent;
 }
 
-/* Secondary Button (Outlined) */
 .btn-secondary {
   background-color: transparent;
-  color: #0056b3;
-  border: 2px solid #0056b3;
+  color: var(--text-main);
+  border: 2px solid var(--border-color);
 }
 
 .btn-secondary:hover {
-  background-color: #f0f8ff;
-  border-color: #004494;
-  color: #004494;
+  background-color: var(--bg-secondary);
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
-/* Primary Button (Filled) */
 .btn-primary {
-  background-color: #007BFF;
+  background-color: var(--primary);
   color: white;
+  border: none;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2); /* Subtle glow */
+  background-color: var(--primary-hover);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
 }
 
-/* Mobile Responsiveness (Simple Hide) */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
   .nav-menu {
-    display: none; /* In a real app, you'd replace this with a hamburger menu */
+    display: none; 
+  }
+  .header-container {
+    padding: 0 20px;
   }
 }
