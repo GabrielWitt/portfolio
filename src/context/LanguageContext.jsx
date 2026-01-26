@@ -1,10 +1,8 @@
 import React, { createContext, useState, useContext } from 'react';
+import en from '../i18n/en';
+import es from '../i18n/es';
 
-// Añadimos un valor por defecto al crear el contexto
-const LanguageContext = createContext({
-  language: 'es',
-  toggleLanguage: () => {}
-});
+const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState('es');
@@ -13,8 +11,11 @@ export const LanguageProvider = ({ children }) => {
     setLanguage((prev) => (prev === 'es' ? 'en' : 'es'));
   };
 
+  // Determinamos el diccionario actual aquí una sola vez
+  const dictionary = language === 'es' ? es : en;
+
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage }}>
+    <LanguageContext.Provider value={{ language, toggleLanguage, t: dictionary }}>
       {children}
     </LanguageContext.Provider>
   );
