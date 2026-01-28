@@ -1,9 +1,26 @@
 import { useLanguage } from '../../context/LanguageContext';
 import './Projects.css';
+import DvoraImg from '../../assets/DvoraProject.png';
+import HabitsImg from '../../assets/HabitsAI.png';
+import InsuranceImg from '../../assets/Insurance.png';
 
 const Projects = () => {
   // Ahora extraemos 't' (traducciones) y 'language' del contexto
   const { t, language } = useLanguage();
+
+  const srtImg = (projectName) => {
+    switch(projectName) {
+      case 'HABITSAI':
+        return HabitsImg;
+      case 'DVORA':
+        return DvoraImg;
+      case 'Insurance':
+        return InsuranceImg;
+      default:
+        break;
+    }
+    return DvoraImg;
+  }
 
   return (
     <section id="projects" className="projects-section">
@@ -16,7 +33,7 @@ const Projects = () => {
             <div className="project-image-container">
               {/* Intentamos cargar la imagen, si falla mostramos el icono */}
               <img 
-                src={project.image} 
+                src={srtImg(project.image)} 
                 className="project-img" 
                 alt={project.content[language].title}
                 onError={(e) => {

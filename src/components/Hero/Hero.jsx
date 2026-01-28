@@ -1,6 +1,5 @@
 import './Hero.css';
 import { useLanguage } from '../../context/LanguageContext';
-// Importamos la imagen directamente para asegurar que Webpack/Vite la procese correctamente
 import profileImg from '../../assets/GAboWittPortfolio.png';
 
 const Hero = () => {

@@ -46,7 +46,7 @@ const es = {
     projects: [
       {
         id: 1,
-        image: '../../assets/dvora-app.png',
+        image: 'DVORA',
         tech: ['Ionic 7', 'SwiftUI', 'Firebase', 'ML Kit'],
         content: {
           en: {
@@ -61,7 +61,7 @@ const es = {
       },
       {
         id: 2,
-        image: '../../assets/insurance-platform.png',
+        image: 'Insurance',
         tech: ['Angular', 'Firebase', 'Cloud Functions'],
         content: {
           en: {
@@ -76,7 +76,7 @@ const es = {
       },
       {
         id: 3,
-        image: '../../assets/habits-ai.png',
+        image: 'HABITSAI',
         tech: ['Ionic 3', 'Firebase', 'Node.js'],
         content: {
           en: {
