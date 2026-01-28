@@ -2,7 +2,7 @@ import './Hero.css';
 import { useLanguage } from '../../context/LanguageContext';
 import profileImg from '../../assets/GAboWittPortfolio.png';
 
-const Hero = () => {
+const Hero = ({ onOpenContact }) => {
   // Extraemos 't' (las traducciones) del contexto
   const { t } = useLanguage();
 
@@ -33,7 +33,7 @@ const Hero = () => {
             {t.home.subtitle}
           </p>
           
-          <div className="hero-cta-group">
+          <div className="hero-cta-group" onClick={onOpenContact}>
             <a href="#projects" className="btn btn-primary">
               {t.home.ctaPrimary}
             </a>

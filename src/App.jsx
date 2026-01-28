@@ -27,7 +27,7 @@ function App() {
 
         <main>
           {/* Usamos id directamente en los componentes para el scroll suave */}
-          <Hero />
+          <Hero onOpenContact={openContact} />
           
           <section id="projects">
             <Projects />
