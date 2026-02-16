@@ -1,52 +1,82 @@
 import React from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import { 
-  FaReact, FaNodeJs, FaMobileAlt, FaCloud, 
-  FaLightbulb, FaComments, FaTasks, FaApple, 
-  FaCode
+  FaReact, 
+  FaMobileAlt, 
+  FaApple, 
+  FaNodeJs, 
+  FaCode, 
+  FaCloud,
+  FaLightbulb,
+  FaComments,
+  FaTasks,
+  FaCheckCircle
 } from 'react-icons/fa';
 import { 
-  SiTypescript, SiFirebase, SiTailwindcss, SiIonic, SiSwift, SiRedux, SiGoogleplay, SiAmazon 
+  SiTypescript, 
+  SiRedux, 
+  SiTailwindcss, 
+  SiIonic, 
+  SiSwift, 
+  SiGoogleplay, 
+  SiFirebase, 
+  SiAmazon,
+  SiNextdotjs,
+  SiJavascript,
+  SiDotnet
 } from 'react-icons/si';
 import './Skills.css';
 
 const Skills = () => {
   const { t } = useLanguage();
 
-  // Diccionario de iconos para habilidades técnicas
-  const getIcon = (skill) => {
-    const icons = {
-      'React': <FaReact />,
-      'TypeScript': <SiTypescript />,
-      'Next.js': <FaReact />, // Next no tiene icono oficial en FA/SI a veces, React queda bien
-      'Redux': <SiRedux />,
-      'Tailwind CSS': <SiTailwindcss />,
-      'React Native': <FaMobileAlt />,
-      'Ionic': <SiIonic />,
-      'SwiftUI': <SiSwift />,
-      'App Store Publishing': <FaApple />, // Para la versión EN
-      'Publicación en App Store': <FaApple />, // Para la versión ES
-      'Play Store Publishing': <SiGoogleplay />, // Para la versión EN
-      'Publicación en Play Store': <SiGoogleplay />, // Para la versión ES
-      'Node.js': <FaNodeJs />,
-      'Firebase': <SiFirebase />,
-      'RESTful APIs': <FaCode />, // Versión en inglés
-      'APIs RESTful': <FaCode />, // Versión en español
-      'NoSQL': <FaCloud />,
-      'AWS Cognito & Lambda': <SiAmazon />,
-    };
-    return icons[skill] || null;
+  // Diccionario de iconos para habilidades técnicas (Hard Skills)
+  const iconsMap = {
+    'React': <FaReact />,
+    'TypeScript': <SiTypescript />,
+    'JavaScript': <SiJavascript />,
+    'Next.js': <SiNextdotjs />,
+    'Redux': <SiRedux />,
+    'Tailwind CSS': <SiTailwindcss />,
+    'React Native': <FaMobileAlt />,
+    'Ionic (v3–v7)': <SiIonic />,
+    'SwiftUI': <SiSwift />,
+    'App Store Publishing': <FaApple />,
+    'Publicación en App Store': <FaApple />,
+    'Play Store Publishing': <SiGoogleplay />,
+    'Publicación en Play Store': <SiGoogleplay />,
+    'Node.js': <FaNodeJs />,
+    'Firebase': <SiFirebase />,
+    'Firebase (Auth, Firestore, Functions)': <SiFirebase />,
+    'AWS Cognito': <SiAmazon />,
+    'AWS S3': <SiAmazon />,
+    'AWS Lambda': <SiAmazon />,
+    'REST API Design': <FaCode />,
+    'Diseño de APIs REST': <FaCode />,
+    'Planificación de Arquitectura Cloud': <FaCloud />,
+    'Cloud Architecture Planning': <FaCloud />,
+    'RESTful APIs': <FaCode />,
+    'APIs RESTful': <FaCode />,
+    'NoSQL': <FaCloud />,
+    '.NET': <SiDotnet />,
+    'Modular Component Systems': <FaTasks />, // idea: modularidad/tareas
+    'Sistemas Modulares de Componentes': <FaTasks />, // idea: modularidad/tareas
+    'Clean Architecture (UI)': <FaCode />, // idea: arquitectura
+    'Capas de Abstracción de API': <FaCloud />, // idea: abstracción cloud/API
+    'API Abstraction Layers': <FaCloud />, // idea: abstracción cloud/API
+    'Pruebas Automatizadas': <FaCheckCircle />, // requiere import
+    'Automated Testing': <FaCheckCircle /> // requiere import
   };
 
-  // Diccionario de iconos para habilidades blandas
-  const getSoftIcon = (iconName) => {
-    const icons = {
-      'FaLightbulb': <FaLightbulb />,
-      'FaComments': <FaComments />,
-      'FaTasks': <FaTasks />
-    };
-    return icons[iconName] || <FaLightbulb />;
+  // Diccionario de iconos para habilidades blandas (Soft Skills)
+  const softIconsMap = {
+    'FaLightbulb': <FaLightbulb />,
+    'FaComments': <FaComments />,
+    'FaTasks': <FaTasks />
   };
+
+  const getIcon = (skill) => iconsMap[skill] || null;
+  const getSoftIcon = (iconName) => softIconsMap[iconName] || <FaLightbulb />;
 
   return (
     <section id="skills" className="skills-section">

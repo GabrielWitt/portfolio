@@ -12,7 +12,7 @@ export const LanguageProvider = ({ children }) => {
   };
 
   // Determinamos el diccionario actual aquí una sola vez
-  const dictionary = language === 'es' ? es : en;
+  const dictionary = language === 'en' ? en : es;
 
   return (
     <LanguageContext.Provider value={{ language, toggleLanguage, t: dictionary }}>
