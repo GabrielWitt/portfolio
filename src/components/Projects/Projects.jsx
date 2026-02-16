@@ -5,8 +5,7 @@ import HabitsImg from '../../assets/HabitsAI.png';
 import InsuranceImg from '../../assets/Insurance.png';
 
 const Projects = () => {
-  // Ahora extraemos 't' (traducciones) y 'language' del contexto
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
 
   const srtImg = (projectName) => {
     switch(projectName) {
@@ -17,44 +16,46 @@ const Projects = () => {
       case 'Insurance':
         return InsuranceImg;
       default:
-        break;
+        return DvoraImg;
     }
-    return DvoraImg;
   }
 
   return (
     <section id="projects" className="projects-section">
-      {/* Usamos el título que viene del JSON de traducción */}
-      <h2 className="section-title">{t.skills.sectionTitle}</h2>
+      <h2 className="section-title">{t.projects.sectionTitle}</h2>
       
       <div className="projects-grid">
-        {t.skills.projects.map((project) => (
+        {t.projects.projects.map((project) => (
           <div key={project.id} className="project-card">
+            
             <div className="project-image-container">
-              {/* Intentamos cargar la imagen, si falla mostramos el icono */}
               <img 
                 src={srtImg(project.image)} 
                 className="project-img" 
-                alt={project.content[language].title}
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                  e.target.nextSibling.style.display = 'flex';
-                }}
+                alt={project.content.title}
               />
-              <div className="dummy-image" style={{display: 'none'}}>
-                <span className="image-icon">🖼️</span>
-              </div>
             </div>
 
             <div className="project-info">
-              {/* Accedemos al contenido según el idioma actual */}
-              <h3 className="project-title">
-                {project.content[language].title}
-              </h3>
-              <p className="project-description">
-                {project.content[language].description}
-              </p>
               
+              <h3 className="project-title">
+                {project.content.title}
+              </h3>
+
+              <p className="project-problem">
+                <strong>Problem:</strong> {project.content.problem}
+              </p>
+
+              <p className="project-role">
+                <strong>Role:</strong> {project.content.role}
+              </p>
+
+              <ul className="project-impact">
+                {project.content.impact.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+
               <div className="tech-stack">
                 {project.tech.map((tag, index) => (
                   <span key={index} className="tech-chip">
@@ -62,6 +63,7 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
+
             </div>
           </div>
         ))}

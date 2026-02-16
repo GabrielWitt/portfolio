@@ -85,14 +85,14 @@ const en = {
         image: 'DVORA',
         tech: ['Ionic 7', 'SwiftUI', 'Firebase', 'ML Kit'],
         content: {
-          title: 'Dvora Mobile Ecosystem',
-          problem: "Scaling a growing fintech platform with increasing performance and reliability demands.",
-          role: "Defined frontend architecture standards, led distributed team, and designed v3 Design System.",
+          title: 'Dvora PropTech Mobile Ecosystem',
+          problem: "Scaling a growing PropTech platform focused on building management, rent collection, and internal service monetization, while maintaining performance and reliability.",
+          role: "Defined frontend architecture standards, led a distributed engineering team, and designed the v3 Design System to improve scalability and UI consistency.",
           impact: [
-            "Scaled from 300 to 2,000+ users",
-            "Reduced API calls by 60%",
-            "Improved performance by 30%",
-            "Decreased QA time by 40%"
+            "Scaled platform from 300 to 2,000+ active users",
+            "Reduced API calls by 60% through intelligent caching strategy",
+            "Improved application performance by 30%",
+            "Decreased QA time by 40% by implementing automated testing"
           ]
         }
       },

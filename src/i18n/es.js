@@ -80,19 +80,19 @@ const es = {
   projects: { 
     sectionTitle: 'PROYECTOS SELECCIONADOS',
     projects: [
-      {
+            {
         id: 1,
         image: 'DVORA',
         tech: ['Ionic 7', 'SwiftUI', 'Firebase', 'ML Kit'],
         content: {
-          title: 'Ecosistema Móvil Dvora',
-          problem: "Escalabilidad de una plataforma fintech con crecientes exigencias de rendimiento y confiabilidad.",
-          role: "Definición de estándares de arquitectura frontend, liderazgo de equipo distribuido y diseño del Design System v3.",
+          title: 'Ecosistema Móvil PropTech Dvora',
+          problem: "Escalamiento de una plataforma PropTech enfocada en la gestión de edificios, cobranza de rentas y monetización de servicios internos, manteniendo alto rendimiento y confiabilidad.",
+          role: "Definición de estándares de arquitectura frontend, liderazgo de equipo distribuido y diseño del Design System v3 para mejorar escalabilidad y consistencia visual.",
           impact: [
-            "Escalamiento de 300 a 2,000+ usuarios",
-            "Reducción del 60% en llamadas a API",
-            "Mejora del 30% en rendimiento",
-            "Disminución del 40% en tiempo de QA"
+            "Escalamiento de 300 a 2,000+ usuarios activos",
+            "Reducción del 60% en llamadas a API mediante estrategia de caché inteligente",
+            "Mejora del 30% en rendimiento de la aplicación",
+            "Disminución del 40% en tiempo de QA mediante pruebas automatizadas"
           ]
         }
       },

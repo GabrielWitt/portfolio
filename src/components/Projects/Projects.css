@@ -7,7 +7,7 @@
 
 .section-title {
   text-align: center;
-  color: var(--primary); /* Usando variable azul */
+  color: var(--primary);
   letter-spacing: 2px;
   margin-bottom: 4rem;
   font-size: 2rem;
@@ -22,7 +22,7 @@
 }
 
 .project-card {
-  background: var(--card-bg); /* Cambia en modo oscuro */
+  background: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 20px;
   overflow: hidden;
@@ -67,29 +67,72 @@
   font-size: 3rem;
 }
 
+/* ========================= */
+/* PROJECT INFO SECTION */
+/* ========================= */
+
 .project-info {
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
 .project-title {
-  margin: 0 0 1rem 0;
+  margin: 0;
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--text-main);
 }
 
-.project-description {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 2rem;
-  color: var(--text-muted);
-  min-height: 3em; /* Mantiene alineación si los textos varían */
+/* NUEVO: bloques tipo case study */
+
+.project-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
+
+.project-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+.project-section p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-main);
+  margin: 0;
+}
+
+/* Impact list mejorado */
+
+.impact-list {
+  margin: 0.5rem 0 0 0;
+  padding-left: 1rem;
+}
+
+.impact-list li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+.impact-list li::marker {
+  color: var(--primary);
+}
+
+/* Tech stack */
 
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
+  margin-top: 1rem;
 }
 
 .tech-chip {
@@ -98,7 +141,7 @@
   border: 1px solid var(--border-color);
   padding: 6px 14px;
   border-radius: 50px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
   transition: all 0.2s ease;
 }
@@ -107,6 +150,8 @@
   border-color: var(--primary);
   background-color: rgba(0, 123, 255, 0.1);
 }
+
+/* Responsive */
 
 @media (max-width: 768px) {
   .projects-grid {
