@@ -1,12 +1,12 @@
-
 # Gabriel Witt — Full Stack Engineer (Frontend Specialized)
 
-🇺🇸 Remote-first engineer building scalable web & mobile products with strong frontend architecture and product thinking.
+Hi there 👋  
+I'm a remote-first Full Stack Engineer focused on building scalable web and mobile products with strong frontend architecture and product thinking.
 
----
+This README is available in **English (default)** and **Spanish**.  
+You can switch languages below:
 
-[🇺🇸 English](#gabriel-witt--full-stack-engineer-frontend-specialized)  
-[🇪🇸 Español](#version-en-espanol)
+English (default) | 🇪🇸 [Ver versión en Español](#espanol)
 
 ## 👋 About Me
 
