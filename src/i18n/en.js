@@ -1,62 +1,99 @@
 const en = {
   header: { 
     home: 'Home', 
+    impact: 'Impact',
     projects: 'Projects', 
-    skills: 'Skills', 
-    exp: 'Experience', 
+    skills: 'Expertise', 
+    experience: 'Experience', 
+    leadership: 'Leadership',
     contact: 'Contact', 
-    resume: 'Resume' 
+    resume: 'Download CV' 
   },
+
   home: {
-      headline: "Senior Frontend & Mobile Engineer",
-      subtitle: "10+ years of experience architecting high-performance digital solutions with React, React Native, and SwiftUI. Expert in leading remote teams and scaling startups.",
-      ctaPrimary: "View my work",
-      ctaSecondary: "Contact me",
+    headline: "Senior Full Stack Engineer (Frontend-Focused)",
+    subtitle: "I design scalable frontend architectures, lead distributed teams, and build high-performance web & mobile systems using React, TypeScript, and cloud-native technologies.",
+    ctaPrimary: "View Projects",
+    ctaSecondary: "Download CV",
   },
-  // 1. SECCIÓN DE HABILIDADES (Técnicas y Blandas)
+
+  impact: {
+    title: "Engineering Impact",
+    highlights: [
+      "Reduced API calls by 60% through intelligent caching architecture",
+      "Decreased QA time by 40% by implementing automated testing strategies",
+      "Delivered MVPs in 4 weeks for early-stage startups",
+      "Scaled mobile platform from 300 to 2,000+ users in 18 months",
+      "Improved app performance by 30% through optimization & architectural refactoring"
+    ]
+  },
+
   skillsSection: {
-    title: 'Technical Skills',
-    softTitle: 'Soft Skills',
+    title: 'Core Expertise',
+    softTitle: 'Leadership & Soft Skills',
     categories: [
       {
         id: "frontend",
-        title: "Frontend",
-        skills: ["React", "TypeScript", "Next.js", "Redux", "Tailwind CSS"]
+        title: "Frontend Architecture",
+        skills: [
+          "React",
+          "TypeScript",
+          "Next.js",
+          "Modular Component Systems",
+          "Clean Architecture (UI)",
+          "API Abstraction Layers",
+          "Automated Testing"
+        ]
       },
       {
         id: "mobile",
-        title: "Mobile",
-        skills: ["React Native", "Ionic", "SwiftUI", "App Store Publishing", "Play Store Publishing"]
+        title: "Mobile Engineering",
+        skills: [
+          "React Native",
+          "Ionic (v3–v7)",
+          "SwiftUI",
+          "App Store Publishing",
+          "Play Store Publishing"
+        ]
       },
       {
         id: "backend",
-        title: "Backend & Cloud",
-        skills: ["Node.js", "Firebase", "RESTful APIs", "NoSQL", "AWS Cognito & Lambda"]
+        title: "Backend & Cloud Collaboration",
+        skills: [
+          "Firebase (Auth, Firestore, Functions)",
+          "AWS Cognito",
+          "AWS S3",
+          "AWS Lambda",
+          "REST API Design",
+          "Cloud Architecture Planning"
+        ]
       }
     ],
     softSkills: [
-      { name: "Problem Solving", icon: "FaLightbulb" },
-      { name: "Communication", icon: "FaComments" },
-      { name: "Project Management", icon: "FaTasks" }
+      { name: "Technical Leadership", icon: "FaUsers" },
+      { name: "Architectural Decision-Making", icon: "FaProjectDiagram" },
+      { name: "Remote Team Collaboration", icon: "FaGlobe" },
+      { name: "Product-Oriented Thinking", icon: "FaLightbulb" }
     ]
   },
-  // 2. SECCIÓN DE PROYECTOS
-  skills: { 
-    sectionTitle: 'FEATURED PROJECTS',
+
+  projects: { 
+    sectionTitle: 'SELECTED PROJECTS',
     projects: [
       {
         id: 1,
         image: 'DVORA',
         tech: ['Ionic 7', 'SwiftUI', 'Firebase', 'ML Kit'],
         content: {
-          en: {
-            title: 'Dvora Mobile Ecosystem',
-            description: 'Led development of 2 flagship apps, optimizing load times by 30% and integrating AI-driven recognition features.',
-          },
-          es: {
-            title: 'Ecosistema Móvil Dvora',
-            description: 'Lideré el desarrollo de 2 apps principales, optimizando tiempos de carga en un 30% e integrando funciones de IA.',
-          }
+          title: 'Dvora Mobile Ecosystem',
+          problem: "Scaling a growing fintech platform with increasing performance and reliability demands.",
+          role: "Defined frontend architecture standards, led distributed team, and designed v3 Design System.",
+          impact: [
+            "Scaled from 300 to 2,000+ users",
+            "Reduced API calls by 60%",
+            "Improved performance by 30%",
+            "Decreased QA time by 40%"
+          ]
         }
       },
       {
@@ -64,71 +101,78 @@ const en = {
         image: 'Insurance',
         tech: ['Angular', 'Firebase', 'Cloud Functions'],
         content: {
-          en: {
-            title: 'Digital Insurance Self-Service',
-            description: 'Architected a scalable insurance platform reducing support tickets by 40% through intuitive UX and offline-first capabilities.',
-          },
-          es: {
-            title: 'Autoservicio de Seguros Digital',
-            description: 'Arquitectura de plataforma de seguros que redujo tickets de soporte en un 40% mediante UX intuitiva y capacidades offline.',
-          }
+          title: 'Digital Insurance Self-Service Platform',
+          problem: "High support ticket volume due to manual insurance claim processes.",
+          role: "Architected scalable frontend structure and collaborated in backend API design.",
+          impact: [
+            "Reduced support tickets by 40%",
+            "Improved UX with offline-first architecture",
+            "Delivered production-ready MVP"
+          ]
         }
       },
       {
         id: 3,
         image: 'HABITSAI',
-        tech: ['Ionic 3', 'Firebase', 'Node.js'],
+        tech: ['Ionic', 'Firebase', 'Node.js'],
         content: {
-          en: {
-            title: 'Habits.AI Health-Tech MVP',
-            description: 'Rapid engineering and delivery of a functional health-tech MVP in 4 weeks, leading a remote team of developers.',
-          },
-          es: {
-            title: 'MVP Health-Tech Habits.AI',
-            description: 'Ingeniería y entrega rápida de un MVP funcional para salud en 4 semanas, liderando un equipo remoto.',
-          }
+          title: 'Habits.AI Health-Tech MVP',
+          problem: "Need for rapid product validation in health-tech startup.",
+          role: "Led remote LATAM team and delivered MVP under aggressive 4-week milestone.",
+          impact: [
+            "MVP delivered in 4 weeks",
+            "Real-time synchronization architecture",
+            "High-quality release under tight deadline"
+          ]
         }
       }
     ],
   },
+
   experience: {
     title: 'Professional Experience',
     jobs: [
       {
-        role: 'Mobile Applications Team Lead',
+        role: 'Software Engineer (Freelance)',
+        company: 'Independent',
+        years: '2017 - Present',
+        description: 'Design and delivery of scalable web and mobile systems. Led architectural decisions, implemented Clean Architecture principles, collaborated in API planning using Firebase and AWS, and delivered MVPs for early-stage startups.',
+      },
+      {
+        role: 'Mobile Applications Team Leader',
         company: 'Dvora',
         years: '2020 - 2024',
-        description: 'Led cross-functional teams for Ionic/SwiftUI apps. Scaled platform to 2,000+ active users with 99.9% crash-free rates and implemented CI/CD pipelines.',
-      },
-      {
-        role: 'Senior Software Engineer (Contract)',
-        company: 'Dunathelia',
-        years: '2017 - 2020',
-        description: 'Architected digital self-service solutions and cross-platform mobile apps. Focused on real-time data synchronization and scalable business logic.',
-      },
-      {
-        role: 'Development Lead',
-        company: 'Habits.AI',
-        years: '2017 - 2019',
-        description: 'Managed remote LATAM teams for rapid MVP delivery. Ensured high-quality deliverables under aggressive product milestones.',
+        description: 'Led distributed engineering team, defined frontend architecture standards, implemented caching strategies reducing API calls by 60%, and scaled user base to 2,000+ active users.',
       },
       {
         role: 'SAP UI5 Consultant & Mobile Developer',
         company: 'IBM Ecuador',
         years: '2016 - 2017',
-        description: 'Developed Bluetooth-based automation modules for enterprise clients, cutting operational processing time by 60%.',
-      },
+        description: 'Developed enterprise automation modules reducing operational processing time by 60% while collaborating with international teams.',
+      }
     ],
   },
+
+  leadership: {
+    title: "Leadership & Engineering Philosophy",
+    principles: [
+      "Architecture-first approach for long-term scalability",
+      "Test-driven reliability for confident releases",
+      "Modular systems for faster feature iteration",
+      "Product-focused engineering decisions",
+      "Mentorship and distributed team alignment"
+    ]
+  },
+
   contact: {
-    title: "Get in Touch",
+    title: "Let’s Build Something Scalable",
     nameLabel: "Name",
     emailLabel: "Email",
     messageLabel: "Message",
     button: "Send Message",
     placeholderName: "Your name",
-    placeholderEmail: "gabrowitt@hotmail.com",
-    placeholderMsg: "How can I help you with your next project?",
+    placeholderEmail: "your@email.com",
+    placeholderMsg: "Tell me about your project or technical challenge.",
   }
 }
 
