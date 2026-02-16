@@ -1,8 +1,12 @@
+
 # Gabriel Witt — Full Stack Engineer (Frontend Specialized)
 
 🇺🇸 Remote-first engineer building scalable web & mobile products with strong frontend architecture and product thinking.
 
 ---
+
+[🇺🇸 English](#gabriel-witt--full-stack-engineer-frontend-specialized)  
+[🇪🇸 Español](#version-en-espanol)
 
 ## 👋 About Me
 
@@ -146,9 +150,10 @@ Open to long-term collaboration and growth-focused environments.
 
 ---
 
----
+<details>
+<summary><strong id="espanol">🇪🇸 Versión en Español (Click para expandir)</strong></summary>
 
-# 🇪🇸 Versión en Español
+<br>
 
 # Gabriel Witt — Ingeniero Full Stack (Especializado en Frontend)
 
@@ -231,28 +236,7 @@ Escalar una plataforma en crecimiento con mayores demandas de rendimiento y esta
 
 ---
 
-## 🎯 Busco
-
-- Rol remoto como Full Stack / Frontend Engineer
-- Empresa en EE.UU. o equipo global remoto
-- Entorno enfocado en producto
-- Alta responsabilidad técnica
-- Crecimiento profesional a largo plazo
-
----
-
-## 📬 Contact
-
-🌐 **Portfolio**  
-https://portafoliogabrodev.web.app  
-
-💻 **GitHub**  
-https://github.com/GabrielWitt  
-
-🔗 **LinkedIn**  
-https://www.linkedin.com/in/gabriel-witt/  
-
-## 🇺🇸 Objetivo Profesional — Trabajo Remoto con EE.UU.
+## 🇺🇸 Objetivo Profesional — Trabajo Remoto con Estados Unidos
 
 Actualmente busco oportunidades remotas con empresas basadas en Estados Unidos.
 
@@ -264,3 +248,20 @@ Mi objetivo a largo plazo es formar parte de un equipo de producto de alto impac
 - Participar en decisiones técnicas estratégicas
 
 Cuento con experiencia trabajando con equipos distribuidos y entornos remotos.
+
+---
+
+## 📬 Contacto
+
+🌐 Portfolio  
+https://portafoliogabrodev.web.app  
+
+💻 GitHub  
+https://github.com/GabrielWitt  
+
+🔗 LinkedIn  
+https://www.linkedin.com/in/gabriel-witt/  
+
+📍 Basado en Ecuador — Abierto a oportunidades remotas con EE.UU.
+
+</details>
