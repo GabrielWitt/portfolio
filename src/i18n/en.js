@@ -79,6 +79,10 @@ const en = {
 
   projects: { 
     sectionTitle: 'SELECTED PROJECTS',
+    problemLabel: "Problem",
+    roleLabel: "My Role",
+    impactLabel: "Impact",
+    caseStudyButton: "More Details",
     projects: [
       {
         id: 1,

@@ -1,0 +1,114 @@
+/* ========================= */
+/* MODAL STYLES */
+/* ========================= */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--card-bg);
+  border-radius: 20px;
+  padding: 3rem;
+  max-width: 700px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  animation: fadeInUp 0.3s ease;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
+
+.modal-title {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.modal-section {
+  margin-bottom: 1.5rem;
+}
+
+.project-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+.modal-section p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-main);
+  margin: 0.5rem 0 0 0;
+}
+
+.impact-list {
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+.impact-list li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-main);
+}
+
+.impact-list li::marker {
+  color: var(--primary);
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 2rem;
+}
+
+.tech-chip {
+  background-color: var(--bg-secondary);
+  color: var(--primary);
+  border: 1px solid var(--border-color);
+  padding: 6px 14px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: 0.2s ease;
+}
+
+.modal-close:hover {
+  color: var(--primary);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

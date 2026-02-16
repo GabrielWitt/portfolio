@@ -1,11 +1,15 @@
 import { useLanguage } from '../../context/LanguageContext';
 import './Projects.css';
+import { useState } from 'react';
+import ProjectInfo from './component/ProjectInfo';
 import DvoraImg from '../../assets/DvoraProject.png';
 import HabitsImg from '../../assets/HabitsAI.png';
 import InsuranceImg from '../../assets/Insurance.png';
 
 const Projects = () => {
   const { t } = useLanguage();
+  const [selectedProject, setSelectedProject] = useState(null);
+
 
   const srtImg = (projectName) => {
     switch(projectName) {
@@ -42,32 +46,37 @@ const Projects = () => {
                 {project.content.title}
               </h3>
 
-              <p className="project-problem">
-                <strong>Problem:</strong> {project.content.problem}
-              </p>
-
-              <p className="project-role">
-                <strong>Role:</strong> {project.content.role}
-              </p>
-
-              <ul className="project-impact">
-                {project.content.impact.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
-
-              <div className="tech-stack">
-                {project.tech.map((tag, index) => (
-                  <span key={index} className="tech-chip">
-                    {tag}
-                  </span>
-                ))}
+              <div className="project-section">
+                <span className="project-label">{t.projects.problemLabel}</span>
+                <p className="clamp-2">
+                  {project.content.problem}
+                </p>
               </div>
+
+              <div className="project-section">
+                <span className="project-label">{t.projects.roleLabel}</span>
+                <p className="clamp-2">
+                  {project.content.role}
+                </p>
+              </div>
+
+              <button
+                className="case-study-btn"
+                onClick={() => setSelectedProject(project)}
+              >
+                {t.projects.caseStudyButton}
+              </button>
 
             </div>
           </div>
         ))}
       </div>
+
+      <ProjectInfo 
+        project={selectedProject} 
+        onClose={() => setSelectedProject(null)} 
+      />
+
     </section>
   );
 };
