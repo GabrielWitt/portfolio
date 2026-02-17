@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Header.css';
 import { useLanguage } from '../context/LanguageContext';
+import useResumeDownload from '../hooks/useResumeDownload';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Header = ({ onOpenContact }) => {
@@ -9,14 +10,8 @@ const Header = ({ onOpenContact }) => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
+  const { downloadResume } = useResumeDownload();
 
-  const handleResumeClick = () => {
-    const cvUrl = language === 'en' 
-      ? 'https://raw.githubusercontent.com/GabrielWitt/portfolio/948e7757adf8904e780b527cc766b7ec61b006f7/src/assets/CV/GabrielWittCV.pdf'
-      : 'https://raw.githubusercontent.com/GabrielWitt/portfolio/948e7757adf8904e780b527cc766b7ec61b006f7/src/assets/CV/GabrielWittCVSP.pdf';
-    window.open(cvUrl, '_blank', 'noopener,noreferrer');
-    closeMenu();
-  };
 
   return (
     <header className="header-container">
@@ -47,7 +42,7 @@ const Header = ({ onOpenContact }) => {
           <span className={language === 'es' ? 'lang-active' : ''}>ES</span>
         </div>
 
-        <button onClick={handleResumeClick} className="resume-btn desktop-only">
+        <button onClick={downloadResume} className="resume-btn desktop-only">
           {t.header.resume}
         </button>
 
@@ -63,7 +58,7 @@ const Header = ({ onOpenContact }) => {
         <a href="#skills" onClick={closeMenu}>{t.header.skills}</a>
         <a href="#experience" onClick={closeMenu}>{t.header.exp}</a>
         <hr className="mobile-divider" />
-        <a href="#experience" onClick={handleResumeClick}>{t.header.resume}</a>
+        <a href="#experience" onClick={downloadResume}>{t.header.resume}</a>
         <button className="btn btn-primary" onClick={() => { onOpenContact(); closeMenu(); }}>
           {t.header.contact}
         </button>

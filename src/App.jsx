@@ -4,6 +4,7 @@ import { LanguageProvider } from './context/LanguageContext';
 // Importación de componentes
 import Header from './components/Header';
 import Hero from './components/Hero/Hero';
+import Impact from './components/Impact/Impact';
 import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
 import Experience from './components/Experience/Experience';
@@ -27,14 +28,15 @@ function App() {
 
         <main>
           {/* Usamos id directamente en los componentes para el scroll suave */}
-          <Hero onOpenContact={openContact} />
-          
-          <section id="projects">
-            <Projects />
-          </section>
+          <Hero />
+          <Impact />
 
           <section id="skills">
             <Skills />
+          </section>
+          
+          <section id="projects">
+            <Projects />
           </section>
 
           <section id="experience">

@@ -29,20 +29,37 @@ const es = {
   },
 
   skillsSection: {
-    title: 'Especialización Técnica',
-    softTitle: 'Liderazgo y Habilidades Estratégicas',
+    title: 'Capacidades de Ingeniería',
+    softTitle: 'Principios de Ingeniería',
     categories: [
       {
-        id: "frontend",
-        title: "Arquitectura Frontend",
+        id: "architecture",
+        title: "Arquitectura y Diseño de Sistemas",
         skills: [
-          "React",
-          "TypeScript",
-          "Next.js",
           "Sistemas Modulares de Componentes",
           "Clean Architecture (UI)",
           "Capas de Abstracción de API",
+          "Diseño de APIs REST"
+        ]
+      },
+      {
+        id: "performance",
+        title: "Ingeniería de Rendimiento",
+        skills: [
+          "TypeScript",
+          "React",
+          "Next.js",
           "Pruebas Automatizadas"
+        ]
+      },
+      {
+        id: "cloud",
+        title: "Cloud y Colaboración Backend",
+        skills: [
+          "Firebase (Auth, Firestore, Functions)",
+          "AWS Cognito",
+          "AWS Lambda",
+          "Planificación de Arquitectura Cloud"
         ]
       },
       {
@@ -55,25 +72,13 @@ const es = {
           "Publicación en App Store",
           "Publicación en Play Store"
         ]
-      },
-      {
-        id: "backend",
-        title: "Colaboración Backend & Cloud",
-        skills: [
-          "Firebase (Auth, Firestore, Functions)",
-          "AWS Cognito",
-          "AWS S3",
-          "AWS Lambda",
-          "Diseño de APIs REST",
-          "Planificación de Arquitectura Cloud"
-        ]
       }
     ],
     softSkills: [
-      { name: "Liderazgo Técnico", icon: "FaUsers" },
-      { name: "Toma de Decisiones Arquitectónicas", icon: "FaProjectDiagram" },
-      { name: "Colaboración en Equipos Remotos", icon: "FaGlobe" },
-      { name: "Mentalidad Orientada a Producto", icon: "FaLightbulb" }
+      { name: "Mentalidad architecture-first para escalabilidad a largo plazo", icon: "FaLightbulb" },
+      { name: "Confiabilidad basada en pruebas automatizadas", icon: "FaCheckCircle" },
+      { name: "Decisiones técnicas orientadas a producto", icon: "FaTasks" },
+      { name: "Alineación y mentoría en equipos distribuidos", icon: "FaComments" }
     ]
   },
 

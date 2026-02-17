@@ -29,20 +29,37 @@ const en = {
   },
 
   skillsSection: {
-    title: 'Core Expertise',
-    softTitle: 'Leadership & Soft Skills',
+    title: 'Engineering Capabilities',
+    softTitle: 'Engineering Principles',
     categories: [
       {
-        id: "frontend",
-        title: "Frontend Architecture",
+        id: "architecture",
+        title: "Architecture & System Design",
         skills: [
-          "React",
-          "TypeScript",
-          "Next.js",
           "Modular Component Systems",
           "Clean Architecture (UI)",
           "API Abstraction Layers",
+          "REST API Design"
+        ]
+      },
+      {
+        id: "performance",
+        title: "Performance Engineering",
+        skills: [
+          "TypeScript",
+          "React",
+          "Next.js",
           "Automated Testing"
+        ]
+      },
+      {
+        id: "cloud",
+        title: "Cloud & Backend Collaboration",
+        skills: [
+          "Firebase (Auth, Firestore, Functions)",
+          "AWS Cognito",
+          "AWS Lambda",
+          "Cloud Architecture Planning"
         ]
       },
       {
@@ -55,25 +72,13 @@ const en = {
           "App Store Publishing",
           "Play Store Publishing"
         ]
-      },
-      {
-        id: "backend",
-        title: "Backend & Cloud Collaboration",
-        skills: [
-          "Firebase (Auth, Firestore, Functions)",
-          "AWS Cognito",
-          "AWS S3",
-          "AWS Lambda",
-          "REST API Design",
-          "Cloud Architecture Planning"
-        ]
       }
     ],
     softSkills: [
-      { name: "Technical Leadership", icon: "FaUsers" },
-      { name: "Architectural Decision-Making", icon: "FaProjectDiagram" },
-      { name: "Remote Team Collaboration", icon: "FaGlobe" },
-      { name: "Product-Oriented Thinking", icon: "FaLightbulb" }
+      { name: "Architecture-first mindset for long-term scalability", icon: "FaLightbulb" },
+      { name: "Test-driven reliability and delivery confidence", icon: "FaCheckCircle" },
+      { name: "Product-oriented technical decision making", icon: "FaTasks" },
+      { name: "Distributed team alignment & mentorship", icon: "FaComments" }
     ]
   },
 

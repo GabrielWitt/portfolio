@@ -1,10 +1,12 @@
 import './Hero.css';
 import { useLanguage } from '../../context/LanguageContext';
+import useResumeDownload from '../../hooks/useResumeDownload';
 import profileImg from '../../assets/GAboWittPortfolio.png';
 
-const Hero = ({ onOpenContact }) => {
+const Hero = () => {
   // Extraemos 't' (las traducciones) del contexto
   const { t } = useLanguage();
+  const { downloadResume } = useResumeDownload();
 
   return (
     <section id="home" className="hero-section">
@@ -33,11 +35,11 @@ const Hero = ({ onOpenContact }) => {
             {t.home.subtitle}
           </p>
           
-          <div className="hero-cta-group" onClick={onOpenContact}>
+          <div className="hero-cta-group">
             <a href="#projects" className="btn btn-primary">
               {t.home.ctaPrimary}
             </a>
-            <a href="#contact" className="btn btn-secondary">
+            <a href="#contact" className="btn btn-secondary" onClick={downloadResume}>
               {t.home.ctaSecondary}
             </a>
           </div>
