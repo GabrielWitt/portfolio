@@ -83,59 +83,116 @@ const es = {
   },
 
   projects: { 
-    sectionTitle: 'PROYECTOS SELECCIONADOS',
-    problemLabel: "Problema",
+    sectionTitle: 'Ingeniería en Producción',
+    contextLabel: "Contexto",
+    challengeLabel: "Desafío",
+    architectureLabel: "Decisiones de Arquitectura",
+    tradeoffsLabel: "Compromisos Técnicos",
     roleLabel: "Mi Rol",
     impactLabel: "Impacto",
     caseStudyButton: "Ver detalles",
     projects: [
-            {
+      {
         id: 1,
         image: 'DVORA',
         tech: ['Ionic 7', 'SwiftUI', 'Firebase', 'ML Kit'],
         content: {
           title: 'Ecosistema Móvil PropTech Dvora',
-          problem: "Escalamiento de una plataforma PropTech enfocada en la gestión de edificios, cobranza de rentas y monetización de servicios internos, manteniendo alto rendimiento y confiabilidad.",
-          role: "Definición de estándares de arquitectura frontend, liderazgo de equipo distribuido y diseño del Design System v3 para mejorar escalabilidad y consistencia visual.",
+
+          context:
+            "Dvora es una plataforma PropTech enfocada en la gestión de edificios, cobro de rentas y monetización de servicios en comunidades residenciales.",
+
+          challenge:
+            "La plataforma estaba experimentando un rápido crecimiento de usuarios activos mientras enfrentaba sobreuso de APIs, cuellos de botella en rendimiento y ciclos de QA cada vez más largos. La arquitectura frontend necesitaba escalar sin comprometer estabilidad ni mantenibilidad.",
+
+          architecture: [
+            "Diseñé una arquitectura frontend modular de 3 capas (Core / Tenant / Admin)",
+            "Implementé una estrategia de caché inteligente para reducir llamadas redundantes a la API",
+            "Establecí una estructura basada en features para escalabilidad a largo plazo",
+            "Introduje prácticas de pruebas automatizadas para estabilizar los releases"
+          ],
+
+          tradeoffs:
+            "Priorizamos mantenibilidad y escalabilidad a largo plazo sobre velocidad inmediata de desarrollo, invirtiendo en refactorización arquitectónica antes de continuar expandiendo funcionalidades.",
+
+          role:
+            "Lideré decisiones de arquitectura frontend, mentoreé a un equipo de ingeniería distribuido y definí el Design System v3 para mejorar consistencia visual y velocidad de desarrollo.",
+
           impact: [
-            "Escalamiento de 300 a 2,000+ usuarios activos",
-            "Reducción del 60% en llamadas a API mediante estrategia de caché inteligente",
-            "Mejora del 30% en rendimiento de la aplicación",
-            "Disminución del 40% en tiempo de QA mediante pruebas automatizadas"
+            "Escalamos la plataforma de 300 a más de 2.000 usuarios activos",
+            "Redujimos llamadas a la API en un 60%",
+            "Mejoramos el rendimiento en un 30%",
+            "Reducimos el tiempo de QA en un 40%"
           ]
         }
       },
+
       {
         id: 2,
         image: 'Insurance',
         tech: ['Angular', 'Firebase', 'Cloud Functions'],
         content: {
-          title: 'Plataforma Digital de Autoservicio de Seguros',
-          problem: "Alto volumen de tickets de soporte debido a procesos manuales.",
-          role: "Arquitectura de estructura frontend escalable y colaboración en diseño de APIs backend.",
+          title: 'Plataforma Digital de Autogestión de Seguros',
+
+          context:
+            "Una aseguradora digital necesitaba modernizar su plataforma de autogestión para reducir la dependencia de procesos manuales y soporte operativo.",
+
+          challenge:
+            "Alto volumen de tickets de soporte debido a validaciones manuales de reclamos y flujos poco automatizados para los usuarios.",
+
+          architecture: [
+            "Diseñé una arquitectura frontend escalable en Angular con estructura modular por features",
+            "Integré Firebase y Cloud Functions para procesamiento seguro de reclamos",
+            "Implementé manejo offline-first para usuarios con conectividad inestable"
+          ],
+
+          tradeoffs:
+            "Equilibré la entrega rápida de un MVP con decisiones arquitectónicas que permitieran escalar el producto sin necesidad de reescrituras mayores.",
+
+          role:
+            "Arquitecté la estructura frontend, colaboré en el diseño de APIs backend y coordiné la implementación entre equipos multifuncionales.",
+
           impact: [
             "Reducción del 40% en tickets de soporte",
-            "UX optimizada con enfoque offline-first",
+            "Mejora en la tasa de finalización de autogestión",
             "Entrega de MVP listo para producción"
           ]
         }
       },
+
       {
         id: 3,
         image: 'HABITSAI',
         tech: ['Ionic', 'Firebase', 'Node.js'],
         content: {
           title: 'MVP Health-Tech Habits.AI',
-          problem: "Validación rápida de producto en startup de tecnología para salud.",
-          role: "Liderazgo de equipo remoto LATAM y entrega bajo cronograma agresivo de 4 semanas.",
+
+          context:
+            "Una startup health-tech requería validación rápida de producto para probar engagement y seguimiento de hábitos en tiempo real.",
+
+          challenge:
+            "Entregar un MVP con calidad de producción en solo 4 semanas, coordinando un equipo de ingeniería 100% remoto en LATAM.",
+
+          architecture: [
+            "Implementé sincronización en tiempo real usando Firebase",
+            "Estructuré la aplicación Ionic basada en features para futura escalabilidad",
+            "Diseñé integración backend con servicios Node.js"
+          ],
+
+          tradeoffs:
+            "Priorizamos velocidad de entrega sin sacrificar principios de arquitectura limpia que permitieran escalar después del MVP.",
+
+          role:
+            "Lideré el equipo remoto, definí el roadmap técnico y aseguré la entrega dentro del plazo agresivo establecido.",
+
           impact: [
             "MVP entregado en 4 semanas",
             "Arquitectura con sincronización en tiempo real",
-            "Entrega de alta calidad bajo presión"
+            "Release estable bajo alta presión de tiempo"
           ]
         }
       }
-    ],
+    ]
   },
 
   experience: {

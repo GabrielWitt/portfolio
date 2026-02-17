@@ -83,8 +83,11 @@ const en = {
   },
 
   projects: { 
-    sectionTitle: 'SELECTED PROJECTS',
-    problemLabel: "Problem",
+    sectionTitle: 'Engineering in Production',
+    contextLabel: "Context",
+    challengeLabel: "Challenge",
+    architectureLabel: "Architecture Decisions",
+    tradeoffsLabel: "Trade-offs",
     roleLabel: "My Role",
     impactLabel: "Impact",
     caseStudyButton: "More Details",
@@ -95,47 +98,89 @@ const en = {
         tech: ['Ionic 7', 'SwiftUI', 'Firebase', 'ML Kit'],
         content: {
           title: 'Dvora PropTech Mobile Ecosystem',
-          problem: "Scaling a growing PropTech platform focused on building management, rent collection, and internal service monetization, while maintaining performance and reliability.",
-          role: "Defined frontend architecture standards, led a distributed engineering team, and designed the v3 Design System to improve scalability and UI consistency.",
+
+          context: "Dvora is a PropTech platform focused on building management, rent collection, and service monetization across residential communities.",
+
+          challenge: "The platform was experiencing growth in active users while struggling with API overuse, performance bottlenecks, and increasing QA cycles. The architecture needed to scale without compromising stability.",
+
+          architecture: [
+            "Designed a modular 3-layer frontend architecture (Core / Tenant / Admin)",
+            "Implemented intelligent caching strategy to reduce redundant API calls",
+            "Established feature-based folder structure for long-term scalability",
+            "Introduced automated testing practices to stabilize releases"
+          ],
+
+          tradeoffs: "Prioritized maintainability and long-term scalability over short-term feature velocity. Invested in architectural refactoring before continuing feature expansion.",
+
+          role: "Led frontend architecture decisions, mentored distributed engineering team, and defined the v3 Design System to improve UI consistency and development speed.",
+
           impact: [
             "Scaled platform from 300 to 2,000+ active users",
-            "Reduced API calls by 60% through intelligent caching strategy",
-            "Improved application performance by 30%",
-            "Decreased QA time by 40% by implementing automated testing"
+            "Reduced API calls by 60%",
+            "Improved performance by 30%",
+            "Reduced QA time by 40%"
           ]
         }
       },
+
       {
         id: 2,
         image: 'Insurance',
         tech: ['Angular', 'Firebase', 'Cloud Functions'],
         content: {
           title: 'Digital Insurance Self-Service Platform',
-          problem: "High support ticket volume due to manual insurance claim processes.",
-          role: "Architected scalable frontend structure and collaborated in backend API design.",
+
+          context: "A digital insurance provider needed to modernize its self-service platform to reduce dependency on manual support processes.",
+
+          challenge: "High support ticket volume due to manual claim validation and limited automation in customer workflows.",
+
+          architecture: [
+            "Designed scalable Angular frontend architecture with modular feature structure",
+            "Integrated Firebase backend with Cloud Functions for secure claim processing",
+            "Implemented offline-first data handling for unstable network conditions"
+          ],
+
+          tradeoffs: "Balanced rapid MVP delivery with long-term scalability by prioritizing modular design and reusable service layers.",
+
+          role: "Architected frontend structure, collaborated on backend API design, and coordinated cross-functional implementation.",
+
           impact: [
             "Reduced support tickets by 40%",
-            "Improved UX with offline-first architecture",
-            "Delivered production-ready MVP"
+            "Improved customer self-service completion rate",
+            "Delivered production-ready MVP under tight timeline"
           ]
         }
       },
+
       {
         id: 3,
         image: 'HABITSAI',
         tech: ['Ionic', 'Firebase', 'Node.js'],
         content: {
           title: 'Habits.AI Health-Tech MVP',
-          problem: "Need for rapid product validation in health-tech startup.",
-          role: "Led remote LATAM team and delivered MVP under aggressive 4-week milestone.",
+
+          context: "A health-tech startup required rapid product validation to test user engagement and behavioral tracking features.",
+
+          challenge: "Deliver a production-quality MVP within 4 weeks while coordinating a fully remote LATAM engineering team.",
+
+          architecture: [
+            "Implemented real-time synchronization using Firebase",
+            "Structured feature-based Ionic application for scalability",
+            "Designed backend integration with Node.js services"
+          ],
+
+          tradeoffs: "Prioritized delivery speed while maintaining clean architecture principles to allow post-MVP scaling.",
+
+          role: "Led remote engineering team, defined technical roadmap, and ensured milestone delivery within aggressive deadline.",
+
           impact: [
             "MVP delivered in 4 weeks",
-            "Real-time synchronization architecture",
-            "High-quality release under tight deadline"
+            "Real-time data synchronization architecture",
+            "High-quality release under strict deadline"
           ]
         }
       }
-    ],
+    ]
   },
 
   experience: {

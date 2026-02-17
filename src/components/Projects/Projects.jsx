@@ -72,10 +72,12 @@ const Projects = () => {
         ))}
       </div>
 
-      <ProjectInfo 
-        project={selectedProject} 
-        onClose={() => setSelectedProject(null)} 
-      />
+      {selectedProject && (
+        <ProjectInfo
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
 
     </section>
   );
