@@ -1,7 +1,6 @@
 # Gabriel Witt — Ingeniero Full Stack · Frontend Especializado
 
 Ingeniero orientado a producto con más de 15 años construyendo aplicaciones web y móviles en producción.  
-Disponible presencialmente en España desde **Q1 2027**.
 
 English version below · [Jump to English](#english)
 
@@ -12,8 +11,6 @@ English version below · [Jump to English](#english)
 Soy Ingeniero Full Stack especializado en arquitectura frontend, con experiencia real liderando equipos distribuidos y escalando productos desde cero hasta miles de usuarios.
 
 No soy un desarrollador que ejecuta tickets. Defino estándares, tomo decisiones de arquitectura y me involucro en decisiones de producto.
-
-**Busco un equipo en España** — startup de producto, consultora técnica o empresa de software — donde pueda aportar desde el día uno y crecer a largo plazo.
 
 ---
 
@@ -64,7 +61,6 @@ Plataforma de gestión inmobiliaria con cobro de rentas, servicios a inquilinos 
 ## Disponibilidad
 
 📍 Actualmente en Quito, Ecuador  
-🛫 Llegada a España: **Q1 2027**  
 💼 Abierto a: contrato presencial o híbrido en España · freelance desde Ecuador hasta la llegada
 
 ---
@@ -89,9 +85,7 @@ Available in-person in Spain from **Q1 2027**.
 
 I'm a Full Stack Engineer specialized in frontend architecture. I've led distributed teams, defined architecture standards, and scaled production systems serving thousands of users.
 
-I'm not a ticket-executor. I make architecture decisions, push back when something is wrong, and care about product outcomes — not just code delivery.
-
-**Looking for a team in Spain** — product startup, tech consultancy, or software company — where I can contribute from day one and grow long-term.
+I'm not a ticket-executor. I make architecture decisions, push back when something is wrong, and care about product outcomes — not just code delivery
 
 ---
 
@@ -142,7 +136,6 @@ Property management platform covering rent collection, tenant services, and inte
 ## Availability
 
 📍 Currently based in Quito, Ecuador  
-🛫 Relocating to Spain: **Q1 2027**  
 💼 Open to: in-person or hybrid contract in Spain · freelance from Ecuador until arrival
 
 ---
