@@ -1,267 +1,154 @@
-# Gabriel Witt — Full Stack Engineer (Frontend Specialized)
+# Gabriel Witt — Ingeniero Full Stack · Frontend Especializado
 
-Hi there 👋  
-I'm a remote-first Full Stack Engineer focused on building scalable web and mobile products with strong frontend architecture and product thinking.
+Ingeniero orientado a producto con más de 15 años construyendo aplicaciones web y móviles en producción.  
+Disponible presencialmente en España desde **Q1 2027**.
 
-This README is available in **English (default)** and **Spanish**.  
-You can switch languages below:
-
-English (default) | 🇪🇸 [Ver versión en Español](#espanol)
-
-## 👋 About Me
-
-I’m a Full Stack Engineer specialized in frontend architecture, building scalable web and mobile applications for real-world businesses.
-
-Over the last several years, I have:
-
-- Led distributed teams
-- Designed frontend architecture standards
-- Built cross-platform mobile apps
-- Scaled production systems serving thousands of users
-- Improved performance, reliability, and developer workflows
-
-I focus on writing clean, maintainable code that aligns with business impact.
+English version below · [Jump to English](#english)
 
 ---
 
-## 🛠 Core Expertise
+## Sobre mí
 
-### Frontend
-- React
-- React Native
-- TypeScript
-- JavaScript (ES6+)
-- Modern CSS
-- Component architecture
-- Design Systems
+Soy Ingeniero Full Stack especializado en arquitectura frontend, con experiencia real liderando equipos distribuidos y escalando productos desde cero hasta miles de usuarios.
 
-### Mobile
-- Ionic (v3–v7)
-- Capacitor
-- SwiftUI
-- Firebase
+No soy un desarrollador que ejecuta tickets. Defino estándares, tomo decisiones de arquitectura y me involucro en decisiones de producto.
 
-### Backend & Cloud
-- Firebase (Auth, Firestore, Functions)
-- REST APIs
-- .NET (basic to intermediate)
-- AWS fundamentals
-
-### Engineering Practices
-- Clean architecture
-- Modular component design
-- Performance optimization
-- Code reviews & technical leadership
-- Internationalization (i18n)
-- CI/CD workflows
+**Busco un equipo en España** — startup de producto, consultora técnica o empresa de software — donde pueda aportar desde el día uno y crecer a largo plazo.
 
 ---
 
-## 🚀 Featured Project: Dvora Mobile Ecosystem
+## Stack principal
 
-A property management platform handling:
+**Frontend**
+React · React Native · TypeScript · JavaScript ES6+ · CSS moderno · Design Systems · Arquitectura de componentes
 
-- Rent collection
-- Tenant services
-- Internal building operations
+**Mobile**
+Ionic v3–v7 · Capacitor · SwiftUI · Firebase
 
-### 📌 Challenge
-Scaling a growing PropTech platform with increasing performance and reliability demands.
+**Backend & Cloud**
+Firebase (Auth, Firestore, Functions) · REST APIs · .NET (intermedio) · AWS (fundamentos)
 
-### 🧠 My Role
-- Defined frontend architecture standards
+**Prácticas**
+Clean architecture · Optimización de rendimiento · Code reviews · Liderazgo técnico · i18n · CI/CD
+
+---
+
+## Proyecto destacado: Dvora — Ecosistema Mobile PropTech
+
+Plataforma de gestión inmobiliaria con cobro de rentas, servicios a inquilinos y operaciones internas de edificios.
+
+**El problema:** plataforma en crecimiento con demandas crecientes de rendimiento y estabilidad, sin arquitectura que las sostuviera.
+
+**Mi rol:**
+- Definí los estándares de arquitectura frontend del equipo
+- Lideré el equipo mobile distribuido
+- Diseñé el Design System v3 desde cero
+- Optimicé el consumo de APIs y los flujos de liberación
+
+**Resultados medibles:**
+- 300 → 2.000+ usuarios activos
+- Llamadas API reducidas en 60%
+- Rendimiento mejorado en 30%
+- Tiempo de QA reducido en 40%
+
+---
+
+## Proyectos actuales
+
+**Estudiante Inteligente** — App educativa con backend Firebase Cloud Functions e integración de Remote Config.
+
+**Juego bíblico (GameMaker Studio 2)** — Desarrollo indie personal. Sistemas de inventario, HUD, save/load y mecánicas de combate. Proyecto que combina mi experiencia técnica con mi interés en game development.
+
+---
+
+## Disponibilidad
+
+📍 Actualmente en Quito, Ecuador  
+🛫 Llegada a España: **Q1 2027**  
+💼 Abierto a: contrato presencial o híbrido en España · freelance desde Ecuador hasta la llegada
+
+---
+
+## Contacto
+
+🌐 Portfolio: https://portafoliogabrodev.web.app  
+💻 GitHub: https://github.com/GabrielWitt  
+🔗 LinkedIn: https://www.linkedin.com/in/gabriel-witt/
+
+---
+
+<a name="english"></a>
+# Gabriel Witt — Full Stack Engineer · Frontend Specialized
+
+Product-minded engineer with 15+ years building web and mobile applications in production.  
+Available in-person in Spain from **Q1 2027**.
+
+---
+
+## About
+
+I'm a Full Stack Engineer specialized in frontend architecture. I've led distributed teams, defined architecture standards, and scaled production systems serving thousands of users.
+
+I'm not a ticket-executor. I make architecture decisions, push back when something is wrong, and care about product outcomes — not just code delivery.
+
+**Looking for a team in Spain** — product startup, tech consultancy, or software company — where I can contribute from day one and grow long-term.
+
+---
+
+## Core Stack
+
+**Frontend**
+React · React Native · TypeScript · JavaScript ES6+ · Modern CSS · Design Systems · Component Architecture
+
+**Mobile**
+Ionic v3–v7 · Capacitor · SwiftUI · Firebase
+
+**Backend & Cloud**
+Firebase (Auth, Firestore, Functions) · REST APIs · .NET (intermediate) · AWS (fundamentals)
+
+**Practices**
+Clean architecture · Performance optimization · Code reviews · Technical leadership · i18n · CI/CD
+
+---
+
+## Featured Project: Dvora — PropTech Mobile Ecosystem
+
+Property management platform covering rent collection, tenant services, and internal building operations.
+
+**The problem:** a growing platform with increasing performance and reliability demands, without architecture to support them.
+
+**My role:**
+- Defined frontend architecture standards for the team
 - Led distributed mobile team
-- Designed v3 Design System
-- Optimized API consumption
-- Improved release workflows
+- Designed v3 Design System from scratch
+- Optimized API consumption and release workflows
 
-### 📈 Impact
-- Scaled from 300 → 2,000+ users
-- Reduced API calls by 60%
-- Improved performance by 30%
-- Decreased QA time by 40%
-
----
-
-## 🧩 Portfolio Architecture Improvements
-
-This portfolio is not just visual — it reflects engineering thinking.
-
-Recent upgrades include:
-
-- Modular Case Study component architecture
-- Dynamic modal system
-- Full internationalization support (English / Spanish)
-- Separation of concerns
-- Scalable content structure
-- Improved UX hierarchy
+**Measurable results:**
+- 300 → 2,000+ active users
+- API calls reduced by 60%
+- Performance improved by 30%
+- QA time reduced by 40%
 
 ---
 
-## 🌎 Why Remote?
+## Current Projects
 
-I believe remote work enables:
+**Estudiante Inteligente** — Educational app with Firebase Cloud Functions backend and Remote Config integration.
 
-- Higher focus
-- Better deep work sessions
-- Healthier work-life balance
-- Global collaboration
-
-I have experience working with distributed teams and asynchronous workflows.
+**Biblical Action Game (GameMaker Studio 2)** — Personal indie project. Building inventory systems, HUD, save/load, and combat mechanics. Where my engineering background meets game development.
 
 ---
 
-## 🎯 What I’m Looking For
+## Availability
 
-- Remote Full Stack / Frontend Engineer role
-- US-based company or global remote team
-- Product-focused environment
-- High ownership & architecture responsibility
-- Long-term growth opportunity
+📍 Currently based in Quito, Ecuador  
+🛫 Relocating to Spain: **Q1 2027**  
+💼 Open to: in-person or hybrid contract in Spain · freelance from Ecuador until arrival
 
 ---
 
-## 📬 Contact
+## Contact
 
-🌐 **Portfolio**  
-https://portafoliogabrodev.web.app  
-
-💻 **GitHub**  
-https://github.com/GabrielWitt  
-
-🔗 **LinkedIn**  
-https://www.linkedin.com/in/gabriel-witt/  
-
-## 🇺🇸 US Remote & Relocation Goal
-
-I am actively pursuing remote opportunities with US-based companies.
-
-My long-term objective is to contribute to a high-impact product team where I can:
-
-- Take ownership of frontend architecture
-- Help scale systems and teams
-- Improve performance and developer experience
-- Contribute to product-level decisions
-
-I am fully remote-ready and experienced working with distributed teams across time zones.
-
-Open to long-term collaboration and growth-focused environments.
-
-
----
-
-<details>
-<summary><strong id="espanol">🇪🇸 Versión en Español (Click para expandir)</strong></summary>
-
-<br>
-
-# Gabriel Witt — Ingeniero Full Stack (Especializado en Frontend)
-
-Ingeniero orientado a trabajo remoto, enfocado en arquitectura frontend y construcción de productos escalables web y móviles.
-
----
-
-## 👋 Sobre mí
-
-Soy Ingeniero Full Stack especializado en frontend, con experiencia construyendo aplicaciones reales para negocios en producción.
-
-Durante los últimos años he:
-
-- Liderado equipos distribuidos
-- Definido estándares de arquitectura frontend
-- Construido aplicaciones móviles multiplataforma
-- Escalado sistemas con miles de usuarios
-- Mejorado rendimiento y procesos de desarrollo
-
-Mi enfoque combina calidad técnica con impacto de negocio.
-
----
-
-## 🛠 Especialidades
-
-### Frontend
-- React
-- React Native
-- TypeScript
-- JavaScript moderno
-- CSS moderno
-- Arquitectura de componentes
-- Design Systems
-
-### Mobile
-- Ionic
-- Capacitor
-- SwiftUI
-- Firebase
-
-### Backend & Cloud
-- Firebase
-- APIs REST
-- .NET (intermedio)
-- Fundamentos de AWS
-
-### Prácticas de Ingeniería
-- Arquitectura limpia
-- Diseño modular
-- Optimización de rendimiento
-- Code reviews
-- Internacionalización
-- CI/CD
-
----
-
-## 🚀 Proyecto Destacado: Ecosistema Mobile Dvora
-
-Plataforma PropTech enfocada en:
-
-- Cobro de rentas
-- Servicios para inquilinos
-- Operaciones internas de edificios
-
-### 📌 Reto
-Escalar una plataforma en crecimiento con mayores demandas de rendimiento y estabilidad.
-
-### 🧠 Mi Rol
-- Definición de arquitectura frontend
-- Liderazgo de equipo mobile distribuido
-- Diseño de Design System v3
-- Optimización de consumo de APIs
-- Mejora de procesos de liberación
-
-### 📈 Impacto
-- Crecimiento de 300 → 2,000+ usuarios
-- Reducción de llamadas API en 60%
-- Mejora de rendimiento en 30%
-- Disminución de tiempo de QA en 40%
-
----
-
-## 🇺🇸 Objetivo Profesional — Trabajo Remoto con Estados Unidos
-
-Actualmente busco oportunidades remotas con empresas basadas en Estados Unidos.
-
-Mi objetivo a largo plazo es formar parte de un equipo de producto de alto impacto donde pueda:
-
-- Liderar arquitectura frontend
-- Escalar sistemas y equipos
-- Mejorar rendimiento y experiencia de desarrollo
-- Participar en decisiones técnicas estratégicas
-
-Cuento con experiencia trabajando con equipos distribuidos y entornos remotos.
-
----
-
-## 📬 Contacto
-
-🌐 Portfolio  
-https://portafoliogabrodev.web.app  
-
-💻 GitHub  
-https://github.com/GabrielWitt  
-
-🔗 LinkedIn  
-https://www.linkedin.com/in/gabriel-witt/  
-
-📍 Basado en Ecuador — Abierto a oportunidades remotas con EE.UU.
-
-</details>
+🌐 Portfolio: https://portafoliogabrodev.web.app  
+💻 GitHub: https://github.com/GabrielWitt  
+🔗 LinkedIn: https://www.linkedin.com/in/gabriel-witt/
